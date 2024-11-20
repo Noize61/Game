@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    tools:context=".QuizResults">
+
+<!-- Картинка в верхней части формы -->
+    <ImageView
+        android:id="@+id/pobeda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="40dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pobeda"/>
+
+<!-- Надпись "Ваш результат" -->
+    <TextView
+        android:id="@+id/rezyltat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/pobeda"
+        android:text="Ваш результат:"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="26sp"/>
+
+<!-- Надпись количество правильных и неправильных ответов -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rezyltat"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/correctAnswears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Количество правильных ответов: 0"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#00C855"/>
+
+        <TextView
+            android:id="@+id/inCorrectAnswears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Количество неправильных ответов: 0"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#DD2C00"/>
+    </LinearLayout>
+
+<!-- Кнопка "Начать новую викторину" -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/novaiaVictorina"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Начать новую викторину"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        android:background="@drawable/fon_green"/>
+
+</RelativeLayout>

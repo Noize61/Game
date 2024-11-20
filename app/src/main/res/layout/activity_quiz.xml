@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fon"
+    tools:context=".QuizActivity">
+
+<!-- Шторка вверху формы -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1F6BB8">
+
+<!-- Иконка стрелки назад -->
+        <ImageView
+            android:id="@+id/strelkaNazad"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/strelka_nazad"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"/>
+
+<!-- Название викторины -->
+        <TextView
+            android:id="@+id/topicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:text="Name"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+<!-- Таймер -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/timer"/>
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:59"
+                android:layout_marginEnd="5dp"
+                android:textColor="#FAA72F"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+<!-- Количество вопросов -->
+    <TextView
+        android:id="@+id/vopros"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/fon"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="1/5"
+        android:textColor="#1F6BB8"
+        android:textSize="20sp"/>
+
+<!-- Сам вопрос -->
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-5dp"
+        android:background="@drawable/light_yellow"
+        android:gravity="center"
+        android:minHeight="100dp"
+        android:text="Question will be here...."
+        android:padding="20dp"
+        android:textColor="#CC000000"
+        android:textSize="16sp"/>
+
+<!-- Ответ 1 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otvet1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/fon_otvet"
+        android:text="Otvet1"
+        android:textColor="#1F6BB8"/>
+
+<!-- Ответ 2 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otvet2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fon_otvet"
+        android:text="Otvet2"
+        android:textColor="#1F6BB8"/>
+
+<!-- Ответ 3 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otvet3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fon_otvet"
+        android:text="Otvet3"
+        android:textColor="#1F6BB8"/>
+
+<!-- Ответ 4 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otvet4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fon_otvet"
+        android:text="Otvet4"
+        android:textColor="#1F6BB8"/>
+
+<!-- Кнопка "Далее" -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/fon_green"
+        android:text="Далее"
+        android:textColor="#1F6BB8"/>
+
+</LinearLayout>
